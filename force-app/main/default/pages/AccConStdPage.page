@@ -1,0 +1,37 @@
+<apex:page controller="FirstCustomController" extensions="FirstExtension" sidebar="false" >
+    <apex:tabPanel >
+        <apex:tab label="Create">
+    <apex:form >
+        <apex:pageMessages >
+            
+        </apex:pageMessages>
+        <apex:pageBlock >
+            <!--apex:image url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"></apex:image-->
+            <apex:pageBlockSection title="Account Information" columns="1" collapsible="false">
+                <apex:inputText value="{!accName}" label="Account Name"></apex:inputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Contact Information" columns="1" collapsible="false">
+                <apex:inputText value="{!lastName}" label="Last Name"></apex:inputText>
+                <apex:inputText value="{!email}" label="Email"></apex:inputText>
+                <apex:inputText value="{!mobile}" label="Mobile Number"></apex:inputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Student Information" columns="1" collapsible="false">
+                <apex:inputText value="{!studentName}" label="Student Name"></apex:inputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton action="{!saveAllRecords}" value="Save"></apex:commandButton>
+            </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:form>
+            </apex:tab>
+        <apex:tab label="View">
+        <apex:pageBlock >  
+            <apex:pageBlockTable value="{!conList}" var="cons">
+        	<apex:column value="{!cons.Id}"/>
+            <apex:column value="{!cons.Name}"/>
+            <apex:column value="{!cons.Email}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>   
+    </apex:tab>
+    </apex:tabPanel>    
+</apex:page>

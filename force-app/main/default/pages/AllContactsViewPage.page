@@ -1,0 +1,10 @@
+<apex:page controller="FirstExtension">
+    <apex:pageBlock title="All Contacts">
+        <!--apex:pageMessage severity="" strength="1" title="All Contacts">This Page contains all the Contacts.</apex:pageMessage-->
+    	<apex:pageBlockTable value="{!conList}" var="cons">
+        	<apex:column value="{!cons.Id}"/>
+            <apex:column value="{!cons.Name}"/>
+            <apex:column value="{!cons.Email}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

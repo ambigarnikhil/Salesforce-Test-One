@@ -1,0 +1,15 @@
+<apex:page standardController="Student__c" recordSetVar="students">
+    <apex:pageBlock title="All Students">
+        <apex:form id="theform">
+            <apex:pageBlockSection >
+            	<apex:dataList value="{!students}" var="s">
+                	{!s.Name}
+                </apex:dataList>
+            </apex:pageBlockSection>
+            <apex:panelGrid columns="2">
+            	<apex:commandLink action="{!previous}" value="prev"/>
+                <apex:commandLink action="{!next}" value="next"/>
+            </apex:panelGrid>
+        </apex:form>    
+    </apex:pageBlock>
+</apex:page>

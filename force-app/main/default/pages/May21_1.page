@@ -1,0 +1,9 @@
+<apex:page standardController="Student__c">
+    <apex:form id="form1">
+    	<apex:pageBlock id="block1">
+        	<apex:pageBlockSection id="section1">
+            	<apex:inputField id="Name" value="{!Student__c.Student_Name__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page controller="April30controller">
+    <apex:toolbar id="Thetoolbar">
+        <apex:tabPanel id="tabpanelone">
+            <apex:tab label="Home"></apex:tab>
+        	<apex:tab label="Accounts" onclick="{!objectname = 'Account'}">Displays Account Records</apex:tab>
+            <apex:tab label="Contacts" onclick="{!objectname = 'Contact'}">Displays Contact Records</apex:tab>
+        </apex:tabPanel>
+        <apex:toolbarGroup location="right" itemSeparator="line">
+            <apex:form >
+        	<apex:outputText value="Enter Text:"></apex:outputText>
+            <apex:inputText value="{!searchtext}"></apex:inputText>
+            <apex:commandButton value="Search" action="{!getcontacts}" ></apex:commandButton>    
+            </apex:form>
+        </apex:toolbarGroup>
+    </apex:toolbar>
+    <apex:pageMessage rendered="{!ren1}" severity="Warning" strength="1" title="{!pagemssg}"></apex:pageMessage>
+    <apex:pageBlock rendered="{!ren}" >
+        	<apex:pageBlockTable value="{!conList}" var="cons">
+                <apex:column value="{!cons.Id}"/>
+                <apex:column value="{!cons.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+</apex:page>

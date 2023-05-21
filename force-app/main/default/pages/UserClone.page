@@ -1,0 +1,47 @@
+<apex:page controller="userClone_Controller" sidebar="false" name="UserClone" standardStylesheets="false" docType="html-5.0">
+    <stylesheet>
+        <style type="text/CSS">
+           #header{
+            	font-size: 20px;
+            	font-family: Calibri;
+            	color: White;
+            	border: 2px solid green;
+            	padding: 10px;
+            	background-color: Black;
+            }
+            #deloitteimg{
+            	style:"float: right";
+            	width: 100px;
+            	height: 30px;
+            	float: right;
+            }
+            #Intro{
+            	margin-top: 20px;
+            }
+    	</style>
+    </stylesheet>
+    <div id="header">
+        Deloitte User Clone 
+        <img id="deloitteimg" src="https://curious-bear-r8dah4-dev-ed--c.vf.force.com/resource/1682256341000/SalesforceLogo?"/>
+    </div>
+    <apex:outputText rendered="{!errormssg}">
+        {!comerrormssg}
+    </apex:outputText>
+    <apex:pageMessages />
+    <apex:form >
+        <apex:pageBlock >
+            <div id="Intro">
+                Hi {!userName}, <br/> 
+                Please enter the email address of existing user: <br/> <br/>
+                <apex:inputText value="{!emailinput}">Email Address:&nbsp;</apex:inputText>
+            </div>
+            <br/>
+            	<apex:commandButton action="{!getUser}" value="Get User Record"/>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!display)">
+        	<div>
+                Existing User Details
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

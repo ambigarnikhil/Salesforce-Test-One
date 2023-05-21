@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:panelGrid columns="3" border="3" bgcolor="pink" >
+    	<apex:outputText value="Nikhil"></apex:outputText>
+        <apex:outputText value="Manoj"></apex:outputText>
+        <apex:outputText value="Prajwal"></apex:outputText>
+        <apex:outputText value="Chetan"></apex:outputText>
+        <apex:outputText value="Sachin"></apex:outputText>
+    </apex:panelGrid>
+</apex:page>

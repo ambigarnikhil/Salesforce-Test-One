@@ -1,0 +1,14 @@
+<apex:page standardController="Event__c">
+    <h1>
+        <center>
+         	Please upload the image
+        </center>
+    </h1>
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        	<apex:form >
+            	
+            </apex:form>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

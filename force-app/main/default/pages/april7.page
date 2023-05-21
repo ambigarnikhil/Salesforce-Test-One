@@ -1,0 +1,17 @@
+<apex:page standardController="Student__c" sidebar="false">
+    <apex:pageBlock title="Student View Page">
+        <apex:pageBlockSection title="Student Information" collapsible="false">
+        	<apex:outputField value="{!Student__c.Name}"/>
+            <apex:outputField value="{!Student__c.Initial_fees__c}" />
+            <apex:outputField value="{!Student__c.Email__c}"/>
+        </apex:pageBlockSection>
+        <br><br></br></br>
+		<apex:pageBlock >
+        <apex:pageBlockSection columns="1" collapsible="true" onmouseover="true" title="Personal Information">
+        	<apex:outputField value="{!Student__c.Name}"/>
+            <apex:outputField value="{!Student__c.Initial_fees__c}" />
+            <apex:outputField value="{!Student__c.Email__c}"/>
+        </apex:pageBlockSection>
+		</apex:pageBlock>    
+    </apex:pageBlock>
+</apex:page>
