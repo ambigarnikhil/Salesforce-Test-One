@@ -1,0 +1,15 @@
+<apex:page standardController="Student__c">
+   <apex:form >
+   	<apex:pageBlock title="My Content" mode="edit">
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!Save}" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="My Content Section" columns="1">
+            <apex:inputField value="{!Student__c.Aadhar_Number__c}"></apex:inputField>
+            <apex:inputField value="{!Student__c.Age__c}"/>
+            <apex:inputField value="{!Student__c.Course_Opted__c}" id="course" required="true"/>
+            <apex:inputField value="{!Student__c.Currently_working_at__c}" required="If(course== 'Big data', true, false)"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock> 
+   </apex:form>
+</apex:page>

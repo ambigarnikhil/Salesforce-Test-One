@@ -1,0 +1,3 @@
+<apex:page controller="may2_5ctlr">
+    <apex:outputField value="{!std.Name}"/>
+</apex:page>

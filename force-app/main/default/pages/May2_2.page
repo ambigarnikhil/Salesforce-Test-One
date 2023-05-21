@@ -1,0 +1,7 @@
+<apex:page controller="May2_2">
+    <apex:form >
+    <apex:selectList >
+    	<apex:selectOptions value="{!business}"></apex:selectOptions>
+    </apex:selectList>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page controller="May14_2ctlr">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+            	<apex:inputField value="{!acc1.Name}"/>
+                <apex:inputField value="{!acc1.Phone}"/>
+                <apex:inputField value="{!acc1.Industry}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+            	<apex:commandButton value="Save" action="{!Save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page >
+    <script>
+    	function method1(){   
+		let inputone= document.getElementById('{!$Component.form1.input}')
+        if(inputone.checked){
+        	console.log(inputone)
+        }
+        else{ console.log('Hello')
+            }
+        }
+    </script>
+    <!--apex:form id="form1">
+    <apex:inputCheckbox onchange="method1()" id="input"/>
+    </apex:form --> 
+    <apex:iframe src="https://curious-bear-r8dah4-dev-ed.my.salesforce.com/apex/May19_2"/>
+</apex:page>

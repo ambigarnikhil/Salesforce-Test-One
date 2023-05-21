@@ -1,0 +1,26 @@
+<apex:page standardcontroller="Student__c">
+    <style>
+    	p,div,h1,h2{font-family: sans-serif;}
+    </style>
+    <apex:form >
+        <h1>{!Student__c.Name}</h1><br/>
+        <h2>Student Details</h2><br/>
+        <div id="the account form">
+            <div>
+                <apex:outputLabel for="name" Value="Student Name"/>
+                <apex:inputField id="name" value="{!Student__c.Student_Name__c}"/>
+            </div><br/>
+            <div>
+                <apex:outputLabel for="age" Value="Student Age"/>
+                <apex:inputField id="age" value="{!Student__c.Age__c}"/>
+            </div><br/>
+            <div>
+                <apex:outputLabel for="course" Value="Course Opted"/>
+                <apex:inputField id="course" value="{!Student__c.Course_Opted__c}"/>
+            </div><br/>
+        </div>
+        <div>
+            <apex:commandButton action="{!Save}" value="Save"/>
+        </div>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page controller="May20_1Ctlr" sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputText value="Please upload a image:"></apex:outputText><br/><br/>
+            <apex:outputLabel value="Document Name " for="Name" />
+        <apex:inputText value="{!doc.Name}" id="Name"/><br/><br/>
+    	<apex:inputFile value="{!doc.body}" fileName="{!doc.Name}">
+        </apex:inputFile><br/>
+        <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton value="Save" action="{!Save}"/>
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:image value="{!url}" rendered="{!imagerender}" width="200px" height="200px"/>
+</apex:page>

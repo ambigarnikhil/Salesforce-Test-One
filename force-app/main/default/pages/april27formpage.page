@@ -1,0 +1,15 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="Please fill the below details:">
+            <apex:pageBlockSection title="Personal Information" collapsible="false">
+                <apex:inputText label="Enter Name:" ></apex:inputText><br/><br/>
+                <apex:inputText label="Age:"></apex:inputText><br/><br/>
+                <apex:inputText label="Enter UserName:"></apex:inputText><br/><br/>
+                <apex:inputSecret label="Enter Password:"></apex:inputSecret><br/><br/>
+                <apex:inputTextarea label="Cover letter:"></apex:inputTextarea><br/><br/>
+                <apex:inputCheckbox label="Are you US citizen:"></apex:inputCheckbox><br/><br/>
+            </apex:pageBlockSection>
+            <apex:commandButton Value="Save"/>
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>
