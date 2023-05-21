@@ -1,0 +1,11 @@
+<apex:page showHeader="false" sidebar="false">
+    <script>
+        function test(){
+        	alert('Redirect');
+            window.location.replace("http://www.w3schools.com");
+        }
+</script>
+    <apex:form >
+    	<apex:commandButton value="Click here" onclick="test();" />
+    </apex:form>
+</apex:page>

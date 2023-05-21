@@ -1,0 +1,18 @@
+<apex:page >
+    <script>
+    	function changefont(input,textId){
+        console.log(document.getElementById(textId));
+        if(input.checked){
+            document.getElementById(textId).style.fontWeight="bold";
+        }
+        else{
+        	document.getElementById(textId).style.fontWeight="normal";
+        }
+        }
+    </script>
+    <label for="input">Hello</label>
+    <input type="checkbox" id="input" onclick="changefont(this,'{!$Component.input.first}');"/>
+    <div id="first">
+        Hello everyone
+    </div>
+</apex:page>

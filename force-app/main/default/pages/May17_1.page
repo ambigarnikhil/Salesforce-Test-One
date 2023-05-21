@@ -1,0 +1,16 @@
+<apex:page sidebar="false" showHeader="false">
+    <script>
+    	function validate(){
+        	let input1= document.getElementById('input1');
+            console.log(input1)
+            if(input1 === ''){
+            	alert('Value is required')
+                return false
+            }
+        }
+    </script>
+    <apex:form >
+        <apex:inputText title="Name" id="input1"/>
+    	<apex:commandButton title="Save" onclick="validate()" value="Save"/>
+    </apex:form>
+</apex:page>

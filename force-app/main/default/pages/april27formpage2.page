@@ -1,0 +1,13 @@
+<apex:page >
+    <apex:form >
+    	<apex:outputLabel value="Enter Name: " for="name"></apex:outputLabel>
+        <apex:inputText id="name"/><br/><br/>
+        <apex:outputLabel value="Are you currently employed?" for="citizen"></apex:outputLabel>
+        <apex:inputCheckbox id="citizen"></apex:inputCheckbox><br/><br/>
+        <apex:outputLink value="https://www.google.com/">Google</apex:outputLink>
+    </apex:form>
+    <apex:panelBar >
+        <apex:panelBarItem label="Panel1" onenter="alert('Entering item 1');" onleave="alert('leaving item1');" >panel bar item one</apex:panelBarItem>
+    	<apex:panelBarItem label="panel2">Panel bar item two</apex:panelBarItem>
+    </apex:panelBar>
+</apex:page>

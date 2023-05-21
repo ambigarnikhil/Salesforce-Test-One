@@ -1,0 +1,26 @@
+<apex:page controller="May15_1_ctlr">
+    <script>
+    function checkgraduated(){
+        var age = document.getElementById('j_id0:form1:j_id2:j_id3:age');
+        console.log(age)
+        var temp = document.getElementById('j_id0:form1:j_id2:j_id3:first');
+        console.log(temp)
+        let temp1 = temp.checked? 1:0;
+        if(temp1=== 1){
+        	var age = document.getElementById('j_id0:form1:j_id2:j_id3:age');
+            age.setAttribute('required',1);
+            console.log(age)
+            
+        }
+    }
+    </script>
+    <apex:form id="form1">
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+            	<apex:inputField value="{!student.Student_Name__c}"/>
+                <apex:inputField value="{!student.Graduated__c}" id="first" onchange="checkgraduated()"/>
+                <apex:inputField value="{!student.Age__c}" id="age"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

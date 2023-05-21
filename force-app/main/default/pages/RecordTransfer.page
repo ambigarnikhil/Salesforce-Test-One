@@ -1,0 +1,93 @@
+<apex:page showHeader="false" sidebar="false" controller="RecordTransfer_CTLR" standardStylesheets="true">
+    <stylesheet>
+    	<style>
+        	.first{
+            	margin-top: 100px;
+            	margin-left: 500px;
+            }
+            .one{
+            	margin-left: 30px;
+            }
+            #labelone{
+            	font-family: "Lucida Console", "Courier New", monospace;
+            	font-size: "40px";
+            }
+            #firstdiv{
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-left: 0px;
+            background-color: #6CBB3C;
+            padding: 10px;
+        }
+        </style>
+    </stylesheet>
+        <script>
+        	function alertmssg(){
+                    console.log('hello')
+                    alert("You are about to get a record from target org.")	    
+            }
+        </script>
+    <apex:image url="{!$Resource.DeloitteBanner}" height="85px" width="1300px"/>
+    <apex:pageMessage title="{!errormssg}" severity="Error" strength="1" rendered="{!errormssgren}"></apex:pageMessage>
+    <div id="firstdiv">
+        Get the Production Record into your Sandbox Org.
+    </div>
+    <apex:form >
+        <div>
+            <apex:outputText value="If you want to get the all the fields, Please click here." styleClass="one"/>
+        	<apex:commandButton value="Click Here!" action="{!setparameters1}"/>
+        </div> <br/>
+        <div>
+            <apex:outputText value="If you want to select fields before fetching, Please click here." styleClass="one"/>
+        	<apex:commandButton value="Click Here!" action="{!setparameters2}"/>
+        </div>  <br/>
+    </apex:form>
+    <apex:form >
+        <apex:pageBlock rendered="{!renmethod1}">
+		<div class="first">
+            <apex:outputLabel value="Record Id: " id="labelone" for="two" />
+            <apex:inputText value="{!recordId}" id="two"/>&nbsp;
+            <apex:commandButton value="Go!" action="{!getrecord}"/>
+        </div>
+        <apex:pageBlock title="Record Details" rendered="{!recordren}" id="recordblock">
+            <!--
+            <apex:pageBlockTable value="{!temp}" var="temp1" >
+                <apex:repeat value="{!fields}" var="FieldLable">  
+                    <apex:column value="{!temp1[FieldLable]}"/>  
+                </apex:repeat>
+            </apex:pageBlockTable>
+			-->
+            <apex:pageMessage title="{!infomssg}" severity="{!severity}" strength="1" rendered="{!infomssgren}"></apex:pageMessage>
+            <apex:outputText value="{!method1response}" rendered="{!recordren}"></apex:outputText>
+    	</apex:pageBlock>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!renmethod2}">
+            <apex:outputText value="Object " /> 
+            <apex:selectList value="{!SelectedObjectName}" size="1">
+            	<apex:selectOptions value="{!allObjectspick}"></apex:selectOptions>
+            </apex:selectList>
+            <apex:commandButton Value="Go" action="{!getfieldsmethod}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:outputText Value="Fields " rendered="{!renfieldname}"/>
+            <apex:selectList value="{!SelectedFieldNames}" size="5" multiselect="true" rendered="{!renfieldname}">
+                <!--apex:inputCheckbox /-->
+            	<apex:selectOptions value="{!allfieldspick}"></apex:selectOptions>
+            </apex:selectList>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:outputText value="Record Id " rendered="{!renfieldname}"/>
+            <apex:inputText value="{!recordIdmethod2}" rendered="{!renfieldname}"/>
+            <apex:commandButton value="Get Record" action="{!method2getrecord}" rendered="{!renfieldname}"/>
+            <apex:pageBlock title="Record Details" rendered="{!recordmethod2ren}">
+            <!--
+            <apex:pageBlockTable value="{!method2record}" var="temp2" >
+                <apex:repeat value="{!SelectedFieldNames}" var="FieldLable1">  
+                    <apex:column value="{!temp2[FieldLable1]}"/>  
+                </apex:repeat>
+            </apex:pageBlockTable>
+			-->
+            <apex:pageMessage title="{!infomssg}" severity="{!severity}" strength="1" rendered="{!infomssgren2}"></apex:pageMessage>
+            <apex:outputText value="{!method2response}" rendered="{!recordmethod2ren}"></apex:outputText>
+    	</apex:pageBlock>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

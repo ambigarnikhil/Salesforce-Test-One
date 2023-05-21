@@ -1,0 +1,16 @@
+<apex:page controller="May14_4_CTLR">
+    <script>
+    	function functionone(){
+            console.log('Hello')
+        }
+    </script>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!student.Student_Name__c}"/>
+                <apex:inputField value="{!student.Graduated__c}"/>
+                <apex:inputField value="{!student.Currently_working_at__c}" onchange="functionone()"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

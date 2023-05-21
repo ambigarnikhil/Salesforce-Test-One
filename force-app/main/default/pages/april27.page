@@ -1,0 +1,18 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:pageMessage severity="warning" strength="1" summary="This is my First page message"></apex:pageMessage>
+    <apex:pageMessage severity="confirm" strength="1" title="Error" summary="I'm Error"></apex:pageMessage>
+    <apex:pageBlock title="FirstBlock">
+    	<apex:pageBlockSection title="FirstBlock Section">
+        	<apex:pageBlockSectionItem >
+            	Name: Nikhil
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Age:22</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >DOB: 12/12/12</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+		<apex:pageBlockSection title="Second Page Block Section">
+        	<apex:pageBlockSectionItem >
+            	Role: Developer
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
